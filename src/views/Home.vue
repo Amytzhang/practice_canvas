@@ -105,7 +105,7 @@ export default {
             console.log(pos,params,dom,rect,size)
             let top = pos[1]
             let lr = size.viewSize[0] - (pos[0] + size.contentSize[0])
-            //TODO LEFT距离有问题
+            //LEFT距离有问题
             let lt = pos[0] > rect.x ? pos[0]-size.contentSize[0] : rect.x - size[0].contentSize[0]
             let location = {
               'top': top,

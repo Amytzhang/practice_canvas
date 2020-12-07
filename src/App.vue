@@ -3,11 +3,21 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <div>{{test}}</div>
     </div>
     <router-view/>
   </div>
 </template>
-
+<script>
+export default {
+  name: 'app',
+  data(){
+    return {
+      test: '实验vscode提交命令'
+    }
+  }
+}
+</script>
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
