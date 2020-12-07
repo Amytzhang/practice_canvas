@@ -4,7 +4,8 @@ module.exports = {
     ? '/production-sub-path/'
     : '/',
   outputDir: 'distName',
-  assetsDir: 'static'
+  assetsDir: 'static',
+  lintOnSave: true
   // devServer: {
   //   proxy: 'http://localhost:4000'
   // }

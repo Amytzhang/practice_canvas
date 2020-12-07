@@ -1,5 +1,75 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about" style="width:100%;height:100%">
+    <target-vue></target-vue>
+    <canvas id="canvas" width="400" height="400">浏览器</canvas>
   </div>
 </template>
+
+<script>
+import targetVue from './target.vue';
+export default {
+  components:{
+    targetVue
+  },
+  mounted() {
+    this.initTest();
+  },
+  methods:{
+    initTest() {
+      let canvas = document.querySelector('#canvas');
+      let ctx = canvas.getContext('2d');
+
+      /*
+  // 填充
+  ctx.fillStyle = 'red';
+  ctx.fillRect(100,100,200,200);
+ */
+
+
+      /*
+  // 划线
+  ctx.strokeStyle='orange';
+  ctx.strokeRect(99,99,201,201)
+
+*/
+
+      /*
+  // 画了一个矩形框
+  ctx.rect(20,20,50,50);
+  ctx.strokeStyle = 'skyblue';
+  // 放到画布上
+  ctx.stroke();
+  */
+      /*
+    ctx.beginPath();
+    ctx.rect(100,20,50,50);
+    ctx.fillStyle = 'skyblue';
+    // 放到画布上
+    ctx.fill();
+ */
+
+
+      //  画单条线
+      // ctx.beginPath(); //新路径
+      // ctx.moveTo(10,20)
+      // ctx.lineTo(100,100)
+      // ctx.strokeStyle='green'
+      // ctx.lineWidth=2
+      // ctx.stroke()
+
+      // 三角形
+      ctx.beginPath();
+      ctx.moveTo(75, 50);
+      ctx.lineTo(100, 75);
+      ctx.lineTo(100, 25);
+      ctx.fill();
+    }
+
+
+  }
+}
+</script>
+
+<style>
+
+</style>
